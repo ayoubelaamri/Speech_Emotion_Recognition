@@ -1,0 +1,14 @@
+python-dotenv
+tensorflow
+tensorflowjs
+keras
+pandas
+librosa
+matplotlib
+seaborn
+tqdm
+sounddevice
+ipykernel
+Flask
+websockets
+wheel
