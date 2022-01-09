@@ -2,6 +2,11 @@
 
 ### Real Time :
 
+![Screenshot 2022-01-09 201138](https://user-images.githubusercontent.com/48627888/148697099-617f630d-50c2-47e5-bcfc-351a3758eb5d.png)
+
+![Screenshot 2022-01-09 201210](https://user-images.githubusercontent.com/48627888/148697104-0d987fd8-af80-4933-8b05-714cbf36c95d.png)
+
+![Screenshot 2022-01-09 201250](https://user-images.githubusercontent.com/48627888/148697106-b34d2239-5b7a-445b-a0ca-351a1483ee24.png)
 
 ### By Audio File :
 
