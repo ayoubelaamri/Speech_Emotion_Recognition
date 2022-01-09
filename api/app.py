@@ -1,14 +1,42 @@
 from flask import Flask
+# from flask_cors import CORS
+from flask_socketio import SocketIO, send
+import time
+
 import record_audio
 import predict_emotion
-# import real_time
-# import testing
+from real_time import RealTime
+
+instance = RealTime()
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'mysecret!'
 
-# with app.app_context():
-#     # within this block, current_app points to app.
-#     print current_app.name
+socketio = SocketIO(app, cors_allowed_origins="*")
+
+app.debug = True
+app.host = 'localhost'
+
+#===============================================
+
+@socketio.on("message")
+def detection():
+    while instance.stream.is_active():
+        time.sleep(0.5)
+        send(instance.emotion, broadcast=True)
+    return None 
+
+@app.route('/start_real_time')
+def start():
+    instance.start()
+    return None
+
+@app.route('/stop_real_time')
+def stop():
+    instance.stop()
+    return None
+
+#===============================================
 
 @app.route('/record')
 def record():
@@ -17,8 +45,13 @@ def record():
         return {"recorded":True}
     else :
         return {"recorded":False}
-
 @app.route('/predict')
 def predict():
+    # result = predict_emotion.run_1D()
     result = predict_emotion.run_2D()
     return {"emotion":result}
+
+#===============================================
+
+if __name__ == '__main__':
+    socketio.run(app, debug=True)

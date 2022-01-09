@@ -1,0 +1,6 @@
+1D MFCC :                     44.79%
+1D MFCC with Aug :            54.10%   
+2D MFCC :                     64.38%
+2D MFCC with Aug :            61.04%
+2D MELSPEC :
+2D MELSPEC with Aug :

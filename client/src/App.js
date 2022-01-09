@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 // import './assets/css/App.css';
-import './assets/css/demo.css';
+// import './assets/css/demo.css';
 import './assets/css/material-bootstrap-wizard.css';
 
 import Landing from './components/Landing'

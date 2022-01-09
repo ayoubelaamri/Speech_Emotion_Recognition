@@ -1,17 +1,14 @@
-/*!
+.hided-waves {
+  opacity: 0;
+}
+.emotion-result {
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 200px !important;
+  padding-top: 200px !important;
+}
 
- =========================================================
- * Material Bootstrap Wizard - v1.0.2
- =========================================================
- 
- * Product Page: https://www.creative-tim.com/product/material-bootstrap-wizard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-bootstrap-wizard/blob/master/LICENSE.md)
- 
- =========================================================
- 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
  body {
   background-color: #E5E5E5;
   color: #3C4858; }
@@ -72,7 +69,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   outline: 0 !important; }
 
 .image-container {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-position: center center;
   background-size: cover;
   position: relative; }
@@ -143,7 +141,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       color: rgba(255, 255, 255, 0.9); }
 
 .wizard-container {
-  padding-top: 50px;
+  padding-top: 40px;
   z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative; }
@@ -218,7 +216,7 @@ h2.title {
   background: #fff; }
 
 .wizard-card {
-  /* min-height: 410px; */
+  min-height: 560px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
   .wizard-card .picture-container {
     position: relative;
@@ -372,7 +370,7 @@ h2.title {
   .wizard-card .choice {
     text-align: center;
     cursor: pointer;
-    margin-top: 20px; }
+    margin-top: 20px;}
     .wizard-card .choice .icon {
       text-align: center;
       vertical-align: middle;
