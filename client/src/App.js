@@ -5,9 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-// import './assets/css/App.css';
-// import './assets/css/demo.css';
-import './assets/css/material-bootstrap-wizard.css';
+import './assets/css/App.css';
 
 import Landing from './components/Landing'
 import NotFound from './components/NotFound'
@@ -20,6 +18,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Landing />}/>
+            <Route path='*' element={<NotFound />} />
 
           </Routes>
         </div>

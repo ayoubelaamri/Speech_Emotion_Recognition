@@ -14,7 +14,7 @@ export default function RealTime() {
 
     React.useEffect(() => {
         !wizardState ? setWavesClass('hided-waves') : setWavesClass('');
-        window.innerWidth > 512 ? setWavesWidth('500') : setWavesWidth('300')
+        window.innerWidth > 991 ? setWavesWidth('500') : setWavesWidth('300')
         getEmotion();
     })
 
@@ -23,12 +23,8 @@ export default function RealTime() {
         setRecordState(RecordState.START);
         fetch('/start_real_time')
         .then(() => {
-            callSocket();
+            socket.emit("message");
         });
-    }
-
-    const callSocket = () => {
-        socket.emit("message");
     }
 
     const getEmotion = () => {
@@ -41,6 +37,7 @@ export default function RealTime() {
         setWizardState(null);
         setRecordState(RecordState.STOP);
         fetch('/stop_real_time');
+        setEmotion(null);
     }
 
     return (
